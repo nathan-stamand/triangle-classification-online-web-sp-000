@@ -14,8 +14,6 @@ class Triangle
     if @side_one <= 0 || @side_two <= 0 || @side_three <= 0 || @side_one == nil || @side_two == nil || @side_three == nil
       begin
         raise TriangleError
-      rescue TriangleError => error 
-        puts error.message
       end
     end
     
