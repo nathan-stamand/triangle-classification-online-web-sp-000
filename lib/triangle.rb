@@ -7,8 +7,6 @@ class Triangle
     @side_two = side_two
     @side_three = side_three
 
-    
-  
   end
   
   def kind 
@@ -17,7 +15,6 @@ class Triangle
       begin
         raise TriangleError
       rescue TriangleError => error 
-        # puts error.message
         puts error.message
       end
     end
