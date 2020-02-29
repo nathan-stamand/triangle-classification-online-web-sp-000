@@ -7,7 +7,7 @@ class Triangle
     @side_two = side_two
     @side_three = side_three
 
-    if @side_one <= 0 || @side_two <= 0 || @side_three <= 0 || @side_one <= nil || @side_two <= nil || @side_three <= nil
+    if @side_one <= 0 || @side_two <= 0 || @side_three <= 0 || @side_one == nil || @side_two == nil || @side_three == nil
       begin
         raise TriangleError 
       rescue TriangleError 
