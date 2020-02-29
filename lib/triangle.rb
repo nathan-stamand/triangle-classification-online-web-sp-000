@@ -10,7 +10,7 @@ class Triangle
     if !@side_one || !@side_two || !@side_three
       begin
       raise TriangleError 
-      rescue 
+      rescue TriangleError
       end
     
     elsif @side_one == @side_two && @side_one == @side_three 
