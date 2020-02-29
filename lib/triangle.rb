@@ -17,7 +17,8 @@ class Triangle
       begin
         raise TriangleError
       rescue TriangleError => error 
-        puts error.message
+        # puts error.message
+        return error.message
       end
     end
     
@@ -33,8 +34,8 @@ class Triangle
   
   class TriangleError < StandardError 
     
-    def self.message 
-      "You done fucked up this triangle, dawg. It's gonna be a no for me."
+    def message 
+      "Triangle::TriangleError"
     end
     
   end 
