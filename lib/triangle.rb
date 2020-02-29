@@ -11,7 +11,7 @@ class Triangle
       begin
       raise TriangleError 
       rescue TriangleError => error 
-        puts "error"
+        error.message
       end
     
     elsif @side_one == @side_two && @side_one == @side_three 
@@ -25,7 +25,9 @@ class Triangle
   
   class TriangleError < StandardError 
     
-    
+    def message 
+      "You done fucked up this triangle, dawg. It's gonna be a no for me."
+    end
     
   end 
   
