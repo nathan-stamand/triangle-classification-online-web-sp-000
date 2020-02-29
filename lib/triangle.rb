@@ -7,7 +7,13 @@ class Triangle
   end
   
   def kind 
-    if @side_one == @side_two && @side_one == @side_three 
+    if !@side_one || !@side_two || !@side_three
+      begin
+      raise TriangleError 
+      rescue 
+      end
+    
+    elsif @side_one == @side_two && @side_one == @side_three 
       :equilateral 
     elsif @side_one == @side_two || @side_one == @side_three || @side_two == @side_three
       :isosceles 
@@ -15,5 +21,9 @@ class Triangle
       :scalene
     end 
   end
+  
+  class TriangleError 
+    
+  end 
   
 end
